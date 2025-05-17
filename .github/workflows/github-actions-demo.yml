@@ -19,8 +19,9 @@ jobs:
           pwd
           cd angular-github-actions
           npm install
-          npm run build --if-present
         
 
       - name: Build Angular app
-        run: npm run build --if-present
+        run: |
+          cd angular-github-actions
+          npm run build --if-present
