@@ -15,7 +15,11 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          cd github-actions-demo
+          npm install
+          npm run build --if-present
+        
 
       - name: Build Angular app
         run: npm run build --if-present
