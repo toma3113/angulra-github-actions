@@ -31,5 +31,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       
       - name: Deploy to S3
-        run: aws s3 sync dist/angular-github-actions/ s3://toma-github-actions-test/ --delete
+        run: |
+          pwd
+          aws s3 sync dist/angular-github-actions/ s3://toma-github-actions-test/ --delete
         
