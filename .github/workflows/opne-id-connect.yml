@@ -33,5 +33,5 @@ jobs:
       - name: Deploy to S3
         run: |
           pwd
-          aws s3 sync dist/angular-github-actions/ s3://toma-github-actions-test/ --delete
+          aws s3 sync ./dist/angular-github-actions/ s3://toma-github-actions-test/ --delete
         
